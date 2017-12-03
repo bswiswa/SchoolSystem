@@ -1,8 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.AdminController">
+   <children>
+      <TabPane prefHeight="720.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Students">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutX="268.0" prefHeight="687.0" prefWidth="1012.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="268.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TableView fx:id="studentTable" prefHeight="687.0" prefWidth="1011.0">
+                                <columns>
+                                  <TableColumn fx:id="idColumn" prefWidth="96.0" text="ID" />
+                                  <TableColumn fx:id="firstNameColumn" prefWidth="188.0" text="First Name" />
+                                    <TableColumn fx:id="lastNameColumn" prefWidth="194.0" text="Last Name" />
+                                    <TableColumn fx:id="emailColumn" minWidth="0.0" prefWidth="243.0" text="Email" />
+                                    <TableColumn fx:id="dobColumn" prefWidth="210.0" text="DOB" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </HBox>
+                        <VBox layoutX="60.0" layoutY="14.0" prefHeight="687.0" prefWidth="266.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="944.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="269.0" text="Add Students">
+                                 <padding>
+                                    <Insets left="76.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="id" promptText="ID">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="firstName" promptText="First Name">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="lastName" layoutX="10.0" layoutY="54.0" promptText="Last Name">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="email" layoutX="10.0" layoutY="81.0" promptText="Email">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <DatePicker fx:id="dob" prefHeight="27.0" prefWidth="255.0" promptText="DOB">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </DatePicker>
+                              <Button mnemonicParsing="false" onAction="#addStudent" prefHeight="27.0" prefWidth="245.0" text="Add Entry">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button layoutX="30.0" layoutY="162.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="27.0" prefWidth="245.0" text="Clear Form">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button layoutX="30.0" layoutY="189.0" mnemonicParsing="false" onAction="#loadStudentData" prefHeight="27.0" prefWidth="245.0" text="Load Data">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
 </AnchorPane>
-
