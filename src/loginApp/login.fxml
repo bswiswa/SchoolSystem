@@ -7,11 +7,11 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loginApp.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loginApp.LoginController">
    <children>
       <AnchorPane layoutX="52.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Label fx:id="dbStatus" layoutX="42.0" prefHeight="6.0" prefWidth="34.0" />
+            <Label fx:id="dbStatus" layoutX="90.0" prefHeight="17.0" prefWidth="167.0" />
             <TextField fx:id="username" layoutX="90.0" layoutY="73.0" promptText="username" />
             <Label layoutX="-11.0" layoutY="78.0" prefHeight="17.0" prefWidth="80.0" text="Username" />
             <Label layoutX="-11.0" layoutY="132.0" prefHeight="17.0" prefWidth="80.0" text="Password" />
@@ -20,6 +20,6 @@
             <Label layoutX="-11.0" text="DB Status" />
          </children>
       </AnchorPane>
-      <Button layoutX="142.0" layoutY="240.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="167.0" text="Login" />
+      <Button fx:id="loginButton" layoutX="142.0" layoutY="240.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="167.0" text="Login" />
    </children>
 </AnchorPane>
