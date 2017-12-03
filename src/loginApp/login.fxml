@@ -20,6 +20,7 @@
             <Label layoutX="-11.0" text="DB Status" />
          </children>
       </AnchorPane>
-      <Button fx:id="loginButton" layoutX="142.0" layoutY="240.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="167.0" text="Login" />
+      <Button fx:id="loginButton" layoutX="142.0" layoutY="240.0" mnemonicParsing="false" onAction="#Login" prefHeight="27.0" prefWidth="167.0" text="Login" />
+      <Label fx:id="loginStatus" layoutX="7.0" layoutY="245.0" prefHeight="17.0" prefWidth="128.0" />
    </children>
 </AnchorPane>

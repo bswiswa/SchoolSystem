@@ -27,6 +27,7 @@ public class LoginModel {
 	}
 	
 	public boolean isLogin(String user, String password, String option) throws Exception {
+		System.out.println("isLogin "+ user + " " + password + " "+ option);
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		String sql = "select * from login where username = ? and password = ? and division = ?";
@@ -36,14 +37,17 @@ public class LoginModel {
 			ps.setString(2, password);
 			ps.setString(3, option);
 			rs = ps.executeQuery();
+			System.out.println(rs.toString());
 			
 			if(rs.next())
 				return true;
 			else
 				return false;
 		}catch (SQLException ex) {
+			ex.printStackTrace();
 			return false;
-		}finally {
+		}
+		finally {
 			ps.close();
 			rs.close();
 		}
